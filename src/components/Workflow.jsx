@@ -1,11 +1,13 @@
 import React from 'react'
 import { Network } from 'lucide-react'
 import rocket from "../assets/images/rocket.png"
+import { workflowSteps } from './WorkflowData'
+import WorkflowStep from './WorkflowStep'
 
 function Workflow() {
   return (
-    <section className='flex py-32'>
-      <div className='max-w-7xl mx-auto px-6 text-center flex flex-col items-center'>
+    <section className='flex md:py-32 md:px-70'>
+      <div className='max-w-7xl mx-auto px-6 flex flex-col items-center text-center'>
 
         {/* Badge */}
         <div className='flex w-fit items-center text-[#FBDAAF] mb-6 gap-2 px-4 py-2 rounded-full bg-[#FBDAAF]/10 border border-[#FBDAAF]/20 text-sm font-medium'>
@@ -28,6 +30,16 @@ function Workflow() {
           <img src={rocket} width={57} />
         </div>
 
+        <div className=" mt-20 max-w-3xl">
+          {workflowSteps.map((step, index) => (
+            <div key={index} className=" flex flex-col items-center">
+              <WorkflowStep step={step} />
+              {index !== workflowSteps.length - 1 && (
+                <div className="w-0.5 h-40 bg-[#E4B5FB33] mt-10 mb-10"></div>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )

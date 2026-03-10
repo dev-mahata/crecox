@@ -8,7 +8,7 @@ function Navbar() {
             <div className="mx-auto px-6 py-4 flex items-center justify-between">
 
                 <div className="">
-                    <img src={logo} className='h-10' alt="" />
+                    <a href=""><img src={logo} className='h-10' alt="" /></a>
                 </div>
 
                 <div className="hidden md:flex gap-8 text-sm text-[#99A1AF]">

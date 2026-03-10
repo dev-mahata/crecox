@@ -10,7 +10,7 @@ import creator4 from "../assets/images/creator4.png"
 
 function Hero() {
   return (
-    <section className='min-h-[990px] flex items-center justify-center py-24'>
+    <section className='min-h-[calc(100vh-80px)] flex items-center justify-center py-24'>
 
       <div className="max-w-7xl mx-auto px-6">
 
@@ -44,7 +44,7 @@ function Hero() {
             </p>
 
             {/* Buttons */}
-            <div className="hero-buttons mt-10 flex flex-col md:flex-row gap-4">
+            <div className="hero-buttons mt-10 flex items-center flex-col md:flex-row gap-4">
               <div className="relative inline-block">
                 <div className="md:absolute inset-0 blur-3xl opacity-70 bg-linear-to-r from-[#FBDAAF] via-[#C25CF5] to-[#7338EC] rounded-full"></div>
                 <button className="relative flex items-center gap-3 px-8 py-4 rounded-full

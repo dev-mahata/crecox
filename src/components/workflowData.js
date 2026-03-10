@@ -32,7 +32,7 @@ export const workflowSteps = [
  },
  {
     image: "/images/reward.png",
-    title: "LReward & Grow Together",
+    title: "Reward & Grow Together",
     subtitle: "RECOGNITION FUELS MOMENTUM",
     description: "Top contributors earn rewards, exclusive access, and meaningful recognition that builds loyalty and drives continued participation. As creators feel valued, your community expands naturally—creating a stronger, more impactful cycle for every new campaign"
  },
