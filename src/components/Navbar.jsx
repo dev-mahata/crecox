@@ -18,7 +18,7 @@ function Navbar() {
                     <a href="#">Platform</a>
                 </div>
 
-                <button className="bg-white/5 border border-white/20 text-white px-5 py-2 rounded-full text-sm hover:bg-white/10 transition cursor-pointer">
+                <button className=" hidden md:block bg-white/5 border border-white/20 text-white px-5 py-2 rounded-full text-sm hover:bg-white/10 transition cursor-pointer">
                     Download App →
                 </button>
 
