@@ -6,8 +6,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#00000066",
-        secondary: "#EC4899",
+        primary: "#7338EC",
+        secondary: "#C25CF5",
+        tertiary: "#FBDAAF",
         darkBg: "#000000",
         violetDot: "#AD46FF",
         navLinks: "#99A1AF",

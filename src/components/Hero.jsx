@@ -1,5 +1,6 @@
 
 import React from 'react'
+import { motion } from 'framer-motion'
 import { Apple } from 'lucide-react'
 import { CirclePlay } from 'lucide-react'
 import hero from "../assets/images/hero.png"
@@ -7,12 +8,19 @@ import creator1 from "../assets/images/creator1.png"
 import creator2 from "../assets/images/creator2.png"
 import creator3 from "../assets/images/creator3.png"
 import creator4 from "../assets/images/creator4.png"
+import line1 from "../assets/images/lines/line1.png"
+import line2 from "../assets/images/lines/line2.png"
+import line3 from "../assets/images/lines/line3.png"
+import line4 from "../assets/images/lines/line4.png"
+import line5 from "../assets/images/lines/line5.png"
+import line6 from "../assets/images/lines/line6.png"
+import line7 from "../assets/images/lines/line7.png"
 
 function Hero() {
   return (
-    <section className='min-h-[calc(100vh-80px)] flex items-center justify-center py-24'>
+    <section className='relative min-h-[calc(100vh-80px)] flex items-center justify-center py-24'>
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6 z-10">
 
         <div className="grid md:grid-cols-[572px_500px] items-center justify-center gap-16">
 
@@ -46,7 +54,10 @@ function Hero() {
             {/* Buttons */}
             <div className="hero-buttons mt-10 flex items-center flex-col md:flex-row gap-4">
               <div className="relative inline-block">
-                <div className="md:absolute inset-0 blur-3xl opacity-70 bg-linear-to-r from-[#FBDAAF] via-[#C25CF5] to-[#7338EC] rounded-full"></div>
+
+                {/* Bottom glow */}
+                <div className="absolute left-1/2 -translate-x-1/2  h-5 w-full -bottom-2.5 blur-xl opacity-100 bg-linear-to-r from-[#FBDAAF] via-[#C25CF5] to-[#7338EC] rounded-full"></div>
+
                 <button className="relative flex items-center gap-3 px-8 py-4 rounded-full
                 bg-[linear-gradient(90deg,#FBDAAF,#C25CF5,#7338EC,#C25CF5,#FBDAAF)]
                 bg-size-[200%_100%]
@@ -61,15 +72,15 @@ function Hero() {
 
                 {/* white wave */}
                 <span
-      className="md:absolute inset-0 pointer-events-none
+                  className="md:absolute inset-0 z-0 pointer-events-none
       bg-[linear-gradient(120deg,transparent,rgba(255,255,255,0.2),transparent)]
       bg-size-[200%_100%] bg-left
-      transition-[background-position] duration-700
+      transition-[background-position] duration-700 
       group-hover:bg-right"
-    ></span>
+                ></span>
 
                 <button
-                  className="relative flex items-center gap-3 px-8 py-4 rounded-full
+                  className="flex items-center gap-3 px-8 py-4 rounded-full z-10 relative
     text-white text-[16px] bg-white/10 font-medium border border-white/20 cursor-pointer"
                 >
                   <CirclePlay size={20} />
@@ -84,16 +95,142 @@ function Hero() {
 
           {/* RIGHT IMAGES */}
           <div className="hero-images max-w-50 md:max-w-100 max-h-100 hidden md:grid grid-cols-2 justify-self-end">
-          
-              <img src={creator1} alt="" />
-              <img src={creator2} alt="" />
-              <img src={creator3} alt="" />
-              <img src={creator4} alt="" />
+
+            <img src={creator1} alt="" />
+            <img src={creator2} alt="" />
+            <img src={creator3} alt="" />
+            <img src={creator4} alt="" />
 
           </div>
 
         </div>
 
+      </div>
+
+      {/* lines container */}
+      <div className="absolute top-[62%] left-0">
+        <motion.div className="flex flex-col gap-4"
+          initial="rest"
+          whileHover="hover">
+          <motion.img
+            src={line1}
+            variants={{
+              rest: { y: 0 },
+              hover: {
+                y: [0, -10, 0, 10, 0],
+                transition: {
+                  duration: 1.2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 0
+                }
+              }
+            }}
+          />
+          <motion.img
+            src={line2}
+            variants={{
+              rest: { y: 0 },
+              hover: {
+                y: [0, -10, 0, 10, 0],
+                transition: {
+                  duration: 1.2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 0.2
+                }
+              }
+            }}
+          />
+          <motion.img
+            src={line3}
+            variants={{
+              rest: { y: 0 },
+              hover: {
+                y: [0, -10, 0, 10, 0],
+                transition: {
+                  duration: 1.2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 0.3
+                }
+              }
+            }}
+          />
+          <motion.img
+            src={line4}
+            variants={{
+              rest: { y: 0 },
+              hover: {
+                y: [0, -10, 0, 10, 0],
+                transition: {
+                  duration: 1.2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 0.4
+                }
+              }
+            }}
+          />
+          <motion.img
+            src={line5}
+            variants={{
+              rest: { y: 0 },
+              hover: {
+                y: [0, -10, 0, 10, 0],
+                transition: {
+                  duration: 1.2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 0.5
+                }
+              }
+            }}
+          />
+          <motion.img
+            src={line6}
+            variants={{
+              rest: { y: 0 },
+              hover: {
+                y: [0, -10, 0, 10, 0],
+                transition: {
+                  duration: 1.2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 0.6
+                }
+              }
+            }}
+          />
+          <motion.img
+            src={line7}
+            variants={{
+              rest: { y: 0 },
+              hover: {
+                y: [0, -10, 0, 10, 0],
+                transition: {
+                  duration: 1.2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 0.7
+                }
+              }
+            }}
+          />
+        </motion.div>
+      </div>
+
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="animate-[pulse_4s_ease-in-out_infinite] absolute w-1.5 h-1.5 bg-[#AD46FF] opacity-0.42 rounded-full top-[7.17%] left-[44.72%]" />
+        <div className="animate-[pulse_4s_ease-in-out_infinite] absolute w-1.5 h-1.5 bg-[#AD46FF] opacity-0.29 rounded-full top-[28%] left-[5.14%]" />
+        <div className="animate-[pulse_4s_ease-in-out_infinite] absolute w-1.5 h-1.5 bg-[#AD46FF] opacity-0.52 rounded-full top-[28.75%] left-[50.69%]" />
+        <div className="animate-[pulse_4s_ease-in-out_infinite] absolute w-1 h-1 bg-[#AD46FF] opacity-0.10 rounded-full top-[22%] left-[61.9%]" />
+        <div className="animate-[pulse_4s_ease-in-out_infinite] absolute w-1.5 h-1.5 bg-[#AD46FF] opacity-0.59 rounded-full top-[69.31%] left-[27.27%]" />
+        <div className="animate-[pulse_4s_ease-in-out_infinite] absolute w-1.5 h-1.5 bg-[#AD46FF] opacity-0.10 rounded-full top-[80.46%] left-[2.46%]" />
+        <div className="animate-[pulse_4s_ease-in-out_infinite] absolute w-1.5 h-1.5 bg-[#AD46FF] opacity-0.20 rounded-full top-[85.15%] left-[9.10%]" />
+        <div className="animate-[pulse_4s_ease-in-out_infinite] absolute w-1.5 h-1.5 bg-[#AD46FF] opacity-0.20 rounded-full top-[85.15%] left-[7.10%]" />
+        <div className="animate-[pulse_4s_ease-in-out_infinite] absolute w-1.5 h-1.5 bg-[#AD46FF] opacity-0.30 rounded-full top-[93.15%] left-[9.7%]" />
+        <div className="animate-[pulse_4s_ease-in-out_infinite] absolute w-1 h-1 bg-[#AD46FF] opacity-0.12 rounded-full top-[83.65%] left-[60.5%]" />
       </div>
 
     </section>
