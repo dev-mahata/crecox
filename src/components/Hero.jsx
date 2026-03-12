@@ -20,7 +20,7 @@ function Hero() {
   return (
     <section className='relative min-h-[calc(100vh-80px)] flex items-center justify-center py-24'>
 
-      <div className="max-w-7xl mx-auto z-10">
+      <div className="max-w-7xl mx-auto px-6 z-10">
 
         <div className="grid md:grid-cols-[572px_500px] items-center justify-center gap-16">
 
@@ -56,7 +56,7 @@ function Hero() {
               <div className="relative inline-block">
 
                 {/* Bottom glow */}
-                <div className="absolute left-1/2 -translate-x-1/2  h-5 w-full -bottom-2.5 blur-xl opacity-100 bg-linear-to-r from-[#FBDAAF] via-[#C25CF5] to-[#7338EC] rounded-full"></div>
+                <div className="md:absolute md:flex hidden left-1/2 -translate-x-1/2  h-5 w-full -bottom-2.5 blur-xl opacity-100 bg-linear-to-r from-[#FBDAAF] via-[#C25CF5] to-[#7338EC] rounded-full"></div>
 
                 <button className="relative flex items-center gap-3 px-8 py-4 rounded-full
                 bg-[linear-gradient(90deg,#FBDAAF,#C25CF5,#7338EC,#C25CF5,#FBDAAF)]

@@ -6,7 +6,7 @@ import WorkflowStep from './WorkflowStep'
 
 function Workflow() {
   return (
-    <section className='flex md:py-32 md:px-70'>
+    <section className='flex md:py-32 py:24 md:px-70'>
       <div className='max-w-7xl mx-auto px-6 flex flex-col items-center text-center'>
 
         {/* Badge */}
