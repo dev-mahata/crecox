@@ -20,7 +20,7 @@ function Hero() {
   return (
     <section className='relative min-h-[calc(100vh-80px)] flex items-center justify-center py-24'>
 
-      <div className="max-w-7xl mx-auto px-6 z-10">
+      <div className="max-w-7xl mx-auto z-10">
 
         <div className="grid md:grid-cols-[572px_500px] items-center justify-center gap-16">
 
@@ -108,8 +108,7 @@ function Hero() {
       </div>
 
       {/* lines container */}
-      <div className="absolute top-[62%] left-0">
-        <motion.div className="flex flex-col gap-4"
+        <motion.div className="flex flex-col gap-4 absolute top-[62%] left-0"
           initial="rest"
           whileHover="hover">
           <motion.img
@@ -218,7 +217,6 @@ function Hero() {
             }}
           />
         </motion.div>
-      </div>
 
       <div className="absolute inset-0 pointer-events-none">
         <div className="animate-[pulse_4s_ease-in-out_infinite] absolute w-1.5 h-1.5 bg-[#AD46FF] opacity-0.42 rounded-full top-[7.17%] left-[44.72%]" />

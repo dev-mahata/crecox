@@ -2,7 +2,9 @@ import React from 'react'
 
 function Artists() {
   return (
-    <div>Artists</div>
+    <section className='py-32'>
+      <div>Artists</div>
+    </section>
   )
 }
 
