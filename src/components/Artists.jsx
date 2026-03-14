@@ -34,13 +34,13 @@ function Artists() {
   return (
     <section ref={ref} className='relative' style={{ height: sectionHeight }}>
       <div
-        className={`w-full h-screen flex flex-col justify-center px-6 py-32 ${
-          isPinned
+        className={`w-full h-screen flex flex-col justify-start md:justify-center px-4 sm:px-6 py-10 sm:py-12 md:py-16 lg:py-24
+ ${isPinned
             ? 'fixed top-0 left-0'
             : isPastSection
               ? 'absolute bottom-0 left-0'
               : 'absolute top-0 left-0'
-        }`}
+          }`}
       >
         <div className='text-center mb-10'>
           <h2 className='text-[52px] md:text-[56px] font-light leading-15'>
@@ -74,9 +74,11 @@ function Artists() {
             </div>
 
             <div className='relative'>
-              <div className='absolute -inset-10 rounded-[40px] bg-[radial-gradient(circle,_rgba(194,92,245,0.55)_0%,_rgba(115,56,236,0.18)_45%,_rgba(115,56,236,0)_78%)] blur-[72px]'></div>
-              <div className='relative rounded-[30px] bg-linear-to-b from-[#C25CF5]/60 to-[#7338EC]/10 p-[2px] shadow-[0_0_60px_rgba(194,92,245,0.28)]'>
-                <div className='rounded-[28px] bg-[#12061E]/85 p-3'>
+              <div className="absolute -left-10 -right-10 -bottom-12 top-6 rounded-[44px] bg-[radial-gradient(ellipse_at_center,_rgba(194,92,245,0.72)_0%,_rgba(194,92,245,0.36)_40%,_rgba(115,56,236,0.14)_62%,_rgba(115,56,236,0)_80%)] blur-[72px]"></div>
+              <div className="absolute -inset-10 rounded-[44px] bg-[radial-gradient(ellipse_at_center,_rgba(194,92,245,0.68)_0%,_rgba(194,92,245,0.34)_38%,_rgba(115,56,236,0.16)_58%,_rgba(115,56,236,0)_78%)] blur-[72px]"></div>
+
+              <div className='relative rounded-[30px] bg-linear-to-b from-[#C25CF58C] to-[#7338EC0A] p-[1.5px] shadow-[0_0_40px_rgba(194,92,245,0.22)]'>
+                <div className='rounded-[28px] bg-[#FFFFFF0D] border border-[#FFFFFF1A] p-3'>
                   <div className='relative aspect-[517/352] w-full overflow-hidden rounded-[22px]'>
                     <AnimatePresence mode="wait">
                       <motion.img

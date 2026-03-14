@@ -3,7 +3,6 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Apple } from 'lucide-react'
 import { CirclePlay } from 'lucide-react'
-import hero from "../assets/images/hero.png"
 import creator1 from "../assets/images/creator1.png"
 import creator2 from "../assets/images/creator2.png"
 import creator3 from "../assets/images/creator3.png"
@@ -18,14 +17,14 @@ import line7 from "../assets/images/lines/line7.png"
 
 function Hero() {
   return (
-    <section className='relative min-h-[calc(100vh-80px)] flex items-center justify-center py-24 overflow-hidden'>
+    <section className='relative min-h-[calc(100vh-80px)] flex items-center justify-center py-16 sm:py-20 lg:py-24 overflow-hidden'>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-8 z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
 
-        <div className="grid md:grid-cols-2 items-center">
+        <div className="grid md:grid-cols-2 items-center gap-8 md:gap-10">
 
           {/* LEFT CONTENT */}
-          <div className="hero-content max-h-md text-center md:text-left flex flex-col items-center md:items-start">
+          <div className="hero-content text-center md:text-left flex flex-col items-center md:items-start">
 
             {/* Badge */}
             <div className="hero-badge mb-6 flex items-center bg-white/10 gap-3 px-4 py-1.5 w-fit border border-white/20 rounded-full">
@@ -36,10 +35,10 @@ function Hero() {
             </div>
 
             {/* Heading */}
-            <h1 className='font-secondary text-[42px] md:text-[58px] lg:text-[68px] font-normal leading-18 md:leading-22.5'>
+            <h1 className='font-secondary text-[40px] sm:text-[48px] md:text-[58px] lg:text-[68px] font-normal leading-tight'>
               Where Music
             </h1>
-            <h1 className='font-secondary mb-6 text-[42px] md:text-[58px] lg:text-[68px] font-normal leading-18 md:leading-22.5 bg-linear-to-r from-[#7338EC] via-[#C25CF5] to-[#FBDAAF] bg-clip-text text-transparent'>
+            <h1 className='font-secondary mb-6 text-[40px] sm:text-[48px] md:text-[58px] lg:text-[68px] font-normal leadingtight bg-linear-to-r from-[#7338EC] via-[#C25CF5] to-[#FBDAAF] bg-clip-text text-transparent'>
               Meets Movement
             </h1>
 
@@ -48,17 +47,17 @@ function Hero() {
               Where fans, creators, and artists build music trends together
             </p>
             <p className='text-[#99A1AF] text-[14px] md:text-[16px] leading-6 md:leading-[29.25px]'>
-              UGC-powered music growth driven by real people — not traditional ads
+              UGC-powered music growth driven by real people - not traditional ads
             </p>
 
             {/* Buttons */}
-            <div className="hero-buttons mt-10 flex items-center flex-col md:flex-row gap-4">
-              <div className="relative inline-block">
+            <div className="hero-buttons mt-10 flex w-full items-center flex-col md:w-auto md:flex-row gap-4">
+              <div className="relative w-full md:w-auto">
 
                 {/* Bottom glow */}
                 <div className="md:absolute md:flex hidden left-1/2 -translate-x-1/2  h-5 w-full -bottom-2.5 blur-xl opacity-100 bg-linear-to-r from-[#FBDAAF] via-[#C25CF5] to-[#7338EC] rounded-full"></div>
 
-                <button className="relative flex items-center gap-3 px-8 py-4 rounded-full
+                <button className="relative flex w-full md:w-auto items-center justify-center gap-3 px-8 py-4 rounded-full
                 bg-[linear-gradient(90deg,#FBDAAF,#C25CF5,#7338EC,#C25CF5,#FBDAAF)]
                 bg-size-[200%_100%]
                 bg-left hover:bg-right
@@ -68,7 +67,7 @@ function Hero() {
                   <Apple size={20} /> Download for iOS →
                 </button>
               </div>
-              <div className="relative inline-block group overflow-hidden rounded-full">
+              <div className="relative w-full md:w-auto group overflow-hidden rounded-full">
 
                 {/* white wave */}
                 <span
@@ -80,7 +79,7 @@ function Hero() {
                 ></span>
 
                 <button
-                  className="flex items-center gap-3 px-8 py-4 rounded-full z-10 relative
+                  className="flex w-full md:w-auto items-center justify-center gap-3 px-8 py-4 rounded-full z-10 relative
     text-white text-[16px] bg-white/10 font-medium border border-white/20 cursor-pointer"
                 >
                   <CirclePlay size={20} />
@@ -94,7 +93,7 @@ function Hero() {
           </div>
 
           {/* RIGHT IMAGES */}
-          <div className="hero-images w-full max-w-sm max-h-sm hidden md:grid grid-cols-2 justify-self-end">
+          <div className="hero-images w-full max-w-xs lg:max-w-sm hidden md:grid grid-cols-2 justify-self-end">
 
             <img src={creator1} alt="" />
             <img src={creator2} alt="" />
@@ -108,7 +107,7 @@ function Hero() {
       </div>
 
       {/* lines container */}
-      <motion.div className="flex flex-col gap-4 absolute top-[62%] left-0"
+      <motion.div className="hidden lg:flex flex-col gap-4 absolute top-[62%] left-0"
         initial="rest"
         whileHover="hover">
         <motion.img

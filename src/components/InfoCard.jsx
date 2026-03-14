@@ -11,12 +11,12 @@ function InfoCard({ icon, title, description, gradient }) {
         <div className='absolute left-[380px] top-[84px] w-[63px] h-[211px] -rotate-[168deg] rounded-full bg-[#7338ECB0] blur-[200px]' />
       </div>
 
-      <div className='relative z-10 flex flex-col rounded-3xl p-10 text-start'>
+      <div className='relative z-10 flex flex-col rounded-3xl p-6 sm:p-8 md:p-10 text-start'>
         <div className={`p-4 mb-6 rounded-2xl ${gradient} w-fit`}>
           {icon}
         </div>
 
-        <h3 className='font-bold text-2xl mb-6 leading-9'>{title}</h3>
+        <h3 className='font-bold text-[22px] sm:text-2xl leading-tight mb-6'>{title}</h3>
         <p className='text-[#99A1AF] leading-7.5'>{description}</p>
       </div>
     </div>
