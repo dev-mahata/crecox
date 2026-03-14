@@ -14,7 +14,7 @@ import ray from "../assets/images/ray2.png"
 function Landing() {
     return (
         <>
-            <div className='bg-darkBg text-[#FFFFFF] font-primary relative overflow-hidden'>
+            <div className='bg-darkBg text-[#FFFFFF] font-primary relative overflow-x-hidden'>
                 <div className='pointer-events-none absolute inset-0 overflow-hidden'>
                    <div className='w-[300px] opacity-85 h-[383px] absolute -top-[145px] -right-5 -rotate-[140deg] bg-[#C25CF580] rounded-full blur-3xl'></div>
                    <div className='absolute -top-1 -right-1'>

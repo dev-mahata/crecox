@@ -18,14 +18,14 @@ import line7 from "../assets/images/lines/line7.png"
 
 function Hero() {
   return (
-    <section className='relative min-h-[calc(100vh-80px)] flex items-center justify-center py-24'>
+    <section className='relative min-h-[calc(100vh-80px)] flex items-center justify-center py-24 overflow-hidden'>
 
-      <div className="max-w-7xl mx-auto px-6 z-10">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 z-10">
 
-        <div className="grid md:grid-cols-[572px_500px] items-center justify-center gap-16">
+        <div className="grid md:grid-cols-2 items-center">
 
           {/* LEFT CONTENT */}
-          <div className="hero-content max-h-114 text-center md:text-left flex flex-col items-center md:items-start">
+          <div className="hero-content max-h-md text-center md:text-left flex flex-col items-center md:items-start">
 
             {/* Badge */}
             <div className="hero-badge mb-6 flex items-center bg-white/10 gap-3 px-4 py-1.5 w-fit border border-white/20 rounded-full">
@@ -36,10 +36,10 @@ function Hero() {
             </div>
 
             {/* Heading */}
-            <h1 className='font-secondary text-[42px] md:text-[68px] font-normal leading-18 md:leading-22.5'>
+            <h1 className='font-secondary text-[42px] md:text-[58px] lg:text-[68px] font-normal leading-18 md:leading-22.5'>
               Where Music
             </h1>
-            <h1 className='font-secondary mb-6 text-[42px] md:text-[68px] font-normal leading-18 md:leading-22.5 bg-linear-to-r from-[#7338EC] via-[#C25CF5] to-[#FBDAAF] bg-clip-text text-transparent'>
+            <h1 className='font-secondary mb-6 text-[42px] md:text-[58px] lg:text-[68px] font-normal leading-18 md:leading-22.5 bg-linear-to-r from-[#7338EC] via-[#C25CF5] to-[#FBDAAF] bg-clip-text text-transparent'>
               Meets Movement
             </h1>
 
@@ -47,7 +47,7 @@ function Hero() {
             <p className='text-[#E5E7EB] text-[16px] md:text-[18px] leading-7 md:leading-[32.5px] mb-6'>
               Where fans, creators, and artists build music trends together
             </p>
-            <p className='text-[#99A1AF] text-[14px] md:text-[146x] leading-6 md:leading-[29.25px]'>
+            <p className='text-[#99A1AF] text-[14px] md:text-[16px] leading-6 md:leading-[29.25px]'>
               UGC-powered music growth driven by real people — not traditional ads
             </p>
 
@@ -94,7 +94,7 @@ function Hero() {
           </div>
 
           {/* RIGHT IMAGES */}
-          <div className="hero-images max-w-50 md:max-w-100 max-h-100 hidden md:grid grid-cols-2 justify-self-end">
+          <div className="hero-images w-full max-w-sm max-h-sm hidden md:grid grid-cols-2 justify-self-end">
 
             <img src={creator1} alt="" />
             <img src={creator2} alt="" />
@@ -108,115 +108,115 @@ function Hero() {
       </div>
 
       {/* lines container */}
-        <motion.div className="flex flex-col gap-4 absolute top-[62%] left-0"
-          initial="rest"
-          whileHover="hover">
-          <motion.img
-            src={line1}
-            variants={{
-              rest: { y: 0 },
-              hover: {
-                y: [0, -10, 0, 10, 0],
-                transition: {
-                  duration: 1.2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 0
-                }
+      <motion.div className="flex flex-col gap-4 absolute top-[62%] left-0"
+        initial="rest"
+        whileHover="hover">
+        <motion.img
+          src={line1}
+          variants={{
+            rest: { y: 0 },
+            hover: {
+              y: [0, -10, 0, 10, 0],
+              transition: {
+                duration: 1.2,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0
               }
-            }}
-          />
-          <motion.img
-            src={line2}
-            variants={{
-              rest: { y: 0 },
-              hover: {
-                y: [0, -10, 0, 10, 0],
-                transition: {
-                  duration: 1.2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 0.2
-                }
+            }
+          }}
+        />
+        <motion.img
+          src={line2}
+          variants={{
+            rest: { y: 0 },
+            hover: {
+              y: [0, -10, 0, 10, 0],
+              transition: {
+                duration: 1.2,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0.2
               }
-            }}
-          />
-          <motion.img
-            src={line3}
-            variants={{
-              rest: { y: 0 },
-              hover: {
-                y: [0, -10, 0, 10, 0],
-                transition: {
-                  duration: 1.2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 0.3
-                }
+            }
+          }}
+        />
+        <motion.img
+          src={line3}
+          variants={{
+            rest: { y: 0 },
+            hover: {
+              y: [0, -10, 0, 10, 0],
+              transition: {
+                duration: 1.2,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0.3
               }
-            }}
-          />
-          <motion.img
-            src={line4}
-            variants={{
-              rest: { y: 0 },
-              hover: {
-                y: [0, -10, 0, 10, 0],
-                transition: {
-                  duration: 1.2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 0.4
-                }
+            }
+          }}
+        />
+        <motion.img
+          src={line4}
+          variants={{
+            rest: { y: 0 },
+            hover: {
+              y: [0, -10, 0, 10, 0],
+              transition: {
+                duration: 1.2,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0.4
               }
-            }}
-          />
-          <motion.img
-            src={line5}
-            variants={{
-              rest: { y: 0 },
-              hover: {
-                y: [0, -10, 0, 10, 0],
-                transition: {
-                  duration: 1.2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 0.5
-                }
+            }
+          }}
+        />
+        <motion.img
+          src={line5}
+          variants={{
+            rest: { y: 0 },
+            hover: {
+              y: [0, -10, 0, 10, 0],
+              transition: {
+                duration: 1.2,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0.5
               }
-            }}
-          />
-          <motion.img
-            src={line6}
-            variants={{
-              rest: { y: 0 },
-              hover: {
-                y: [0, -10, 0, 10, 0],
-                transition: {
-                  duration: 1.2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 0.6
-                }
+            }
+          }}
+        />
+        <motion.img
+          src={line6}
+          variants={{
+            rest: { y: 0 },
+            hover: {
+              y: [0, -10, 0, 10, 0],
+              transition: {
+                duration: 1.2,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0.6
               }
-            }}
-          />
-          <motion.img
-            src={line7}
-            variants={{
-              rest: { y: 0 },
-              hover: {
-                y: [0, -10, 0, 10, 0],
-                transition: {
-                  duration: 1.2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 0.7
-                }
+            }
+          }}
+        />
+        <motion.img
+          src={line7}
+          variants={{
+            rest: { y: 0 },
+            hover: {
+              y: [0, -10, 0, 10, 0],
+              transition: {
+                duration: 1.2,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0.7
               }
-            }}
-          />
-        </motion.div>
+            }
+          }}
+        />
+      </motion.div>
 
       <div className="absolute inset-0 pointer-events-none">
         <div className="animate-[pulse_4s_ease-in-out_infinite] absolute w-1.5 h-1.5 bg-[#AD46FF] opacity-0.42 rounded-full top-[7.17%] left-[44.72%]" />

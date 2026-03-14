@@ -6,8 +6,8 @@ import { Target } from 'lucide-react'
 
 function MissionVision() {
   return (
-    <section className='md:py-32 py-24 md:px-72 px-4'>
-      <div className='text-center max-w-7xl'>
+    <section className='md:py-32 py-24 px-4'>
+      <div className='text-center max-w-7xl mx-auto lg:px-42 md:px-10 sm:px-10'>
         {/* Heading */}
         <h2 className='font-semibold text-transparent bg-clip-text bg-linear-to-r from-[#FFFFFF] to-[#6A7282] md:font-bold text-[40px] md:text-[56px] leading-12 md:leading-15 pb-2 hover:bg-'>
           Revolutionizing <span className='font-light text-[#6A7282] text-[45px] md:text-[56px] leading-12 md:leading-15'>Music Growth</span>
