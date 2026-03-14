@@ -1,7 +1,7 @@
 import React from 'react'
 import { Network } from 'lucide-react'
 import rocket from "../assets/images/rocket.png"
-import { workflowSteps } from './WorkflowData'
+import { workflowSteps } from './WorkflowData.js'
 import WorkflowStep from './WorkflowStep'
 
 function Workflow() {
