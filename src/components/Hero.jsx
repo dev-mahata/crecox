@@ -72,15 +72,15 @@ function Hero() {
                 {/* white wave */}
                 <span
                   className="md:absolute inset-0 z-0 pointer-events-none
-      bg-[linear-gradient(120deg,transparent,rgba(255,255,255,0.2),transparent)]
-      bg-size-[200%_100%] bg-left
-      transition-[background-position] duration-700 
-      group-hover:bg-right"
+                              bg-[linear-gradient(120deg,transparent,rgba(255,255,255,0.2),transparent)]
+                              bg-size-[200%_100%] bg-left
+                              transition-[background-position] duration-700 
+                               group-hover:bg-right"
                 ></span>
 
                 <button
                   className="flex w-full md:w-auto items-center justify-center gap-3 px-8 py-4 rounded-full z-10 relative
-    text-white text-[16px] bg-white/10 font-medium border border-white/20 cursor-pointer"
+                  text-white text-[16px] bg-white/10 font-medium border border-white/20 cursor-pointer"
                 >
                   <CirclePlay size={20} />
                   Download for Android →

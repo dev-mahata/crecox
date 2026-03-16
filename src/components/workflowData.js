@@ -11,6 +11,7 @@ export const workflowSteps = [
     title: "Launch Campaign",
     subtitle: "ARTISTS IGNITE THE MOVEMENT",
     description: "Create compelling campaigns with clear objectives, creative briefs, and reward structures that inspire your community to take action",
+    imageClass: "scale-150"
   },
   {
     image: community,

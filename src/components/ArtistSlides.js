@@ -1,9 +1,9 @@
-import campaign from "../assets/images/artists/campaign.jpg"
-import community from "../assets/images/artists/community.jpg"
-import growth from "../assets/images/artists/growth.jpg"
-import relationship from "../assets/images/artists/relationship.jpg"
-import marketing from "../assets/images/artists/marketing.jpg"
-import recognition from "../assets/images/artists/recognition.jpg"
+import campaign from "../assets/images/artists/campaign.png"
+import community from "../assets/images/artists/community.png"
+import growth from "../assets/images/artists/growth.png"
+import relationship from "../assets/images/artists/relationship.png"
+import marketing from "../assets/images/artists/marketing.png"
+import recognition from "../assets/images/artists/recognition.png"
 
 
 export const artistSlides = [

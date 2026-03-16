@@ -5,7 +5,7 @@ import { Target } from 'lucide-react'
 
 function MissionVision() {
   return (
-    <section className='px-4 py-24 md:py-32'>
+    <section className='px-4 pb-24 md:pb-32'>
       <div className='mx-auto max-w-7xl text-center sm:px-6 lg:px-8'>
         {/* Heading */}
         <h2 className='text-[38px] sm:text-[46px] md:text-[56px] font-semibold md:font-bold leading-tight text-transparent bg-clip-text bg-linear-to-r from-[#FFFFFF] to-[#6A7282] pb-2'>
