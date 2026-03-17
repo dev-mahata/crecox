@@ -43,10 +43,10 @@ function Artists() {
           }`}
       >
         <div className='text-center mb-10'>
-          <h2 className='text-[52px] md:text-[56px] font-light leading-15'>
+          <h2 className='text-[40px] sm:text-[48px] md:text-[52px] lg:text-[56px] font-light leading-tight'>
             For <span className='bg-linear-to-r from-[#FBDAAF] via-[#C25CF5] to-[#7338EC] text-transparent bg-clip-text font-semibold'>Artists & Labels</span>
           </h2>
-          <p className='text-[#99A1AF] mt-6'>
+          <p className='text-[#99A1AF] sm:mt-4 md:mt-6'>
             Grow your music with the power of community
           </p>
         </div>
