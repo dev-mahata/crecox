@@ -29,10 +29,19 @@ function Creators() {
             <AnimatePresence mode='wait'>
               <MotionImage key={activeIndex} src={creatorSlides[activeIndex].image} alt=""
                 className="h-[220px] w-full rounded-2xl object-cover sm:h-[280px] md:h-[320px] lg:h-[380px]"
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 1.05 }}
+                initial={{ opacity: 0, x: 40 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -40 }}
                 transition={{ duration: 0.4 }}
+                drag="x"
+                dragConstraints={{ left: 0, right: 0 }}
+                onDragEnd={(event, info) => {
+                  if (info.offset.x < -50) {
+                    setActiveIndex((prev) => (prev + 1) % creatorSlides.length)
+                  } else if (info.offset.x > 50) {
+                    setActiveIndex((prev) => (prev - 1 + creatorSlides.length) % creatorSlides.length)
+                  }
+                }}
               />
             </AnimatePresence>
           </PhoneFrame>
@@ -44,11 +53,10 @@ function Creators() {
                   key={creatorSlides[index].title}
                   type="button"
                   onClick={() => setActiveIndex(index)}
-                  className={`flex h-9 w-9 items-center justify-center cursor-pointer rounded-lg transition-colors sm:h-10 sm:w-10 ${
-                    activeIndex === index
-                      ? 'bg-linear-to-b from-[#C25CF5] to-[#7338EC] text-white'
-                      : 'text-white/75 hover:bg-white/8 hover:text-white'
-                  }`}
+                  className={`flex h-9 w-9 items-center justify-center cursor-pointer rounded-lg transition-colors sm:h-10 sm:w-10 ${activeIndex === index
+                    ? 'bg-linear-to-b from-[#C25CF5] to-[#7338EC] text-white'
+                    : 'text-white/75 hover:bg-white/8 hover:text-white'
+                    }`}
                   aria-label={`Show ${creatorSlides[index].title}`}
                 >
                   <Icon size={16} />
