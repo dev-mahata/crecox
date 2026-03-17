@@ -4,7 +4,7 @@ import { BatteryFull, Wifi, Signal } from 'lucide-react'
 
 function PhoneFrame({ children }) {
   return (
-    <div className='relative w-[224px] sm:w-[248px] md:w-[272px] lg:w-[292px] aspect-[9/17] rounded-[32px] bg-black p-2 shadow-[0_0_80px_rgba(194,92,245,0.25)] sm:rounded-[36px]'>
+    <div className='relative w-[224px] sm:w-[248px] md:w-[272px] lg:w-[292px] aspect-[9/17] rounded-[32px] bg-black p-2 shadow-[0_0_120px_rgba(115,56,236,0.4)] sm:rounded-[36px]'>
       {/* Notch */}
       <div className='absolute top-3 left-1/2 z-10 h-5 w-16 -translate-x-1/2 rounded-full bg-black sm:top-4 sm:w-20'></div>
       <div className='absolute left-8 top-3 z-10 text-[11px] text-white sm:left-10 sm:top-4 sm:text-[12px]'>9:41</div>
