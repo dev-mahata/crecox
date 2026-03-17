@@ -34,7 +34,7 @@ function Artists() {
   return (
     <section ref={ref} className='relative' style={{ height: sectionHeight }}>
       <div
-        className={`w-full h-screen flex flex-col justify-start md:justify-center px-4 sm:px-6 py-10 sm:py-12 md:py-16 lg:py-24
+        className={`w-full flex flex-col justify-start md:justify-center px-4 sm:px-6 py-10 sm:py-12 md:py-16 lg:py-24 md:h-screen
  ${isPinned
             ? 'fixed top-0 left-0'
             : isPastSection

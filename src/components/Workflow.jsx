@@ -110,7 +110,7 @@ function Workflow() {
 
 
   return (
-    <section ref={sectionRef} className="py-24 md:py-32">
+    <section ref={sectionRef} className="pt-24 md:pt-32">
       <div className="mx-auto flex max-w-7xl flex-col items-center px-4 text-center sm:px-6 lg:px-8">
         <div className="mb-6 flex w-fit items-center gap-2 rounded-full border border-[#FBDAAF]/20 bg-[#FBDAAF]/10 px-4 py-2 text-sm font-medium text-[#FBDAAF]">
           <Network size={16} />
