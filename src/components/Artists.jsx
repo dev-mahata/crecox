@@ -63,10 +63,10 @@ function Artists() {
                   transition={{ duration: 0.35, ease: 'easeOut' }}
                   className='absolute inset-0'
                 >
-                  <h3 className='font-semibold mb-6 text-[24px] leading-9'>
+                  <h3 className='font-semibold mb-4 sm:mb-5 md:mb-6 sm:text-[20px] md:text-[22px] lg:text-[24px] leading-tight'>
                     {slide.title}
                   </h3>
-                  <p className='leading-7 text-[#99A1AF]'>
+                  <p className='leading-tight sm:text-[14px] text-[#99A1AF]'>
                     {slide.description}
                   </p>
                 </motion.div>
