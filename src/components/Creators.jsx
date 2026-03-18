@@ -15,14 +15,14 @@ function Creators() {
       setActiveIndex((currentIndex) => (
         currentIndex + 1
       ) % creatorSlides.length)
-    }, 5000)
+    }, 3000)
 
     return () => window.clearInterval(intervalId)
   }, [])
 
   return (
-    <section className='relative overflow-hidden py-12 sm:py-16 lg:py-24'>
-      <div className='mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 md:grid-cols-[0.75fr_1.25fr] md:gap-12 lg:gap-16 lg:px-8'>
+    <section className='relative overflow-hidden py-12 sm:py-16 md:py-20 lg:py-24'>
+      <div className='mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:px-8 md:grid-cols-[0.75fr_1.25fr] md:gap-12 lg:gap-16'>
         {/* Left -> Phone */}
         <div className='relative flex flex-col items-center'>
           <PhoneFrame>
@@ -46,7 +46,7 @@ function Creators() {
             </AnimatePresence>
           </PhoneFrame>
 
-          <div className='pointer-events-none absolute inset-x-0 bottom-24 flex justify-center sm:bottom-28 md:bottom-26 lg:bottom-30'>
+          <div className='pointer-events-none absolute inset-x-0 bottom-24 flex justify-center sm:bottom-24 md:bottom-28 lg:bottom-32'>
             <div className='pointer-events-auto flex items-center gap-1 rounded-[14px] bg-[#0000008C] px-2 py-2 shadow-[0_10px_30px_rgba(0,0,0,0.25)] backdrop-blur-xs sm:px-3'>
               {creatorIcons.map((Icon, index) => (
                 <button
@@ -70,7 +70,8 @@ function Creators() {
           </p>
         </div>
 
-        <div className='flex flex-col justify-center text-center md:justify-start md:mt-15 md:text-left lg:mt-20'>
+        {/* Right Static Text */}
+        <div className='flex flex-col justify-center text-center md:justify-start mt-12 md:mt-16 md:text-left lg:mt-20'>
           <h2 className="text-[36px] font-light leading-tight sm:text-[44px] md:text-[48px] lg:text-[56px]">
             For{" "}
             <span className="bg-gradient-to-r from-[#FBDAAF] via-[#C25CF5] to-[#7338EC] text-transparent bg-clip-text font-semibold">

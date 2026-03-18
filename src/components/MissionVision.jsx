@@ -5,15 +5,15 @@ import { Target } from 'lucide-react'
 
 function MissionVision() {
   return (
-    <section className='px-4 pb-24 md:pb-32'>
-      <div className='mx-auto max-w-7xl text-center sm:px-6 lg:px-8'>
+    <section className='py-12 sm:py-16 md:py-20 lg:py-24'>
+      <div className='mx-auto max-w-7xl text-center px-4 sm:px-6 lg:px-8'>
         {/* Heading */}
         <h2 className='text-[38px] sm:text-[46px] md:text-[56px] font-semibold md:font-bold leading-tight text-transparent bg-clip-text bg-linear-to-r from-[#FFFFFF] to-[#6A7282] pb-2'>
           Revolutionizing <span className='text-[38px] sm:text-[46px] md:text-[56px] font-light leading-tight text-[#6A7282]'>Music Growth</span>
         </h2>
 
         {/* Description */}
-        <p className='text-[#99A1AF] mt-7 mb-16 md:mb-20 md:mt-10 text-[16px] mx-auto md:text-[20px] max-w-3xl leading-6 md:leading-7'>CrecoX is a global UGC music marketing platform that empowers real people—fans, creators, and music lovers—to drive authentic engagement and participatory growth.</p>
+        <p className='text-[#99A1AF] mt-7 mb-16 md:mb-20 text-[16px] mx-auto md:text-[20px] max-w-3xl leading-6 md:leading-7'>CrecoX is a global UGC music marketing platform that empowers real people—fans, creators, and music lovers—to drive authentic engagement and participatory growth.</p>
 
         <div className='grid gap-6 md:grid-cols-2 md:gap-8 max-w-4xl mx-auto'>
           <InfoCard

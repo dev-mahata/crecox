@@ -17,9 +17,9 @@ import line7 from "../assets/images/lines/line7.png"
 
 function Hero() {
   return (
-    <section className='relative min-h-[calc(100vh-80px)] flex items-center justify-center py-16 sm:py-20 lg:py-24 overflow-hidden'>
+    <section className='relative min-h-[calc(100vh-80px)] flex items-center justify-center py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden'>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 z-10">
 
         <div className="grid md:grid-cols-2 items-center gap-8 md:gap-10">
 

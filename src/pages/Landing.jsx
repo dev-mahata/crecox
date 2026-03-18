@@ -9,6 +9,7 @@ import MusicEra from '../components/MusicEra'
 import CTA from '../components/CTA'
 import Footer from '../components/Footer'
 import ray from "../assets/images/ray2.png"
+import Newsletter from '../components/Newsletter'
 
 
 function Landing() {
@@ -32,6 +33,7 @@ function Landing() {
                 <Artists />
                 <Creators />
                 <MusicEra />
+                <Newsletter />
                 <CTA />
                 <Footer />
             </div>

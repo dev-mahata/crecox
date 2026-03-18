@@ -32,15 +32,15 @@ function Artists() {
   const slide = artistSlides[activeIndex]
 
   return (
-    <section ref={ref} className='relative' style={{ height: sectionHeight }}>
+    <section ref={ref} className='relative py-12 sm:py-16 md:py-20 lg:py-24 ' style={{ height: sectionHeight }}>
       <div
-        className={`w-full flex flex-col justify-start md:justify-center px-4 sm:px-6 py-10 sm:py-12 md:py-16 lg:py-24 md:h-screen
+        className={`w-full flex flex-col justify-start md:justify-center mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 lg:h-screen
  ${isPinned
-            ? 'fixed top-0 left-0'
+            ? 'fixed top-0 left-1/2 -translate-x-1/2'
             : isPastSection
-              ? 'absolute bottom-0 left-0'
-              : 'absolute top-0 left-0'
-          }`}
+              ? 'absolute bottom-0 left-1/2 -translate-x-1/2'
+              : 'absolute top-0 left-1/2 -translate-x-1/2'
+           }`}
       >
         <div className='text-center mb-10'>
           <h2 className='text-[40px] sm:text-[48px] md:text-[52px] lg:text-[56px] font-light leading-tight'>
