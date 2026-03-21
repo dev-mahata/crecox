@@ -1,21 +1,52 @@
 import React from 'react'
+import { motion, useMotionValue, useSpring } from 'framer-motion'
 import { Apple, CirclePlay } from 'lucide-react'
 
 function CTA() {
+  const mouseX = useMotionValue(-320)
+  const gradientOpacity = useMotionValue(0)
+  const gradientX = useSpring(mouseX, { stiffness: 60, damping: 20 })
+  const backgroundOpacity = useSpring(gradientOpacity, { stiffness: 70, damping: 18 })
+
+  const handleMouseMove = (e) => {
+    const rect = e.currentTarget.getBoundingClientRect()
+    const progress = (e.clientX - rect.left) / rect.width
+    const moveRange = 420
+    gradientOpacity.set(1)
+    mouseX.set(-moveRange + progress * moveRange * 2)
+  }
+
+  const handleMouseLeave = () => {
+    gradientOpacity.set(0)
+    mouseX.set(-320)
+  }
+
   return (
-    <section className='relative overflow-hidden py-12 sm:py-16 md:py-20 lg:py-24'>
+    <section
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      className='relative overflow-hidden bg-black py-12 sm:py-16 md:py-20 lg:py-24'>
       {/* Background Wrapper */}
       <div className='absolute inset-0 pointer-events-none'>
-        {/* Purple glow */}
-        <div className='absolute right-[-10%] top-[-8%] h-[420px] w-[520px] rounded-full bg-[#C315FF]/45 blur-[120px]'></div>
 
-        {/* Amber glow */}
-        <div className='absolute bottom-[-18%] left-[-18%] h-[360px] w-[420px] rounded-full bg-[#D89A2B]/35 blur-[120px]'></div>
+        {/* Moving Gradient Field */}
+        <motion.div
+          className='absolute inset-y-5 left-[-32%] w-[165%] pointer-events-none'
+          style={{
+            x: gradientX,
+            opacity: backgroundOpacity,
+            background:
+              'linear-gradient(60deg, #020202 0%, #050505 12%, #0f0d09 20%, #241805 30%, #52350e 40%, #9b621a 50%, #d08b36 60%, #e1a06e 68%, #ce7fc8 78%, #8c23d7 90%, #cb00ff 100%)',
+            filter: 'blur(24px)',
+          }}
+        />
+
+        <div className='absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.82)_0%,rgba(0,0,0,0.68)_18%,rgba(0,0,0,0.36)_40%,rgba(0,0,0,0.12)_62%,rgba(0,0,0,0.02)_80%,rgba(0,0,0,0)_100%)]'></div>
 
         {/* Vertical light columns */}
         <div className='absolute inset-0 opacity-60'
           style={{
-            background: "repeating-linear-gradient(90deg, transparent 0px, transparent 42px, rgba(255,255,255,0.06) 44px, rgba(255,255,255,0.02) 58px, transparent 72px)"
+            background: "repeating-linear-gradient(90deg, rgba(0,0,0,0.24) 0px, rgba(0,0,0,0.24) 36px, rgba(255,255,255,0.07) 38px, rgba(255,255,255,0.015) 52px, rgba(0,0,0,0.18) 66px)"
           }}
         ></div>
       </div>
